@@ -37,10 +37,11 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    position: sticky;
+    position: static;
     top: 0;
     width: 100%;
     z-index: 1000;
+
 }
 
 /* Navigation Links */
@@ -124,6 +125,8 @@ body {
         flex-direction: column;
         align-items: center;
         width: 100%;
+
+
         background: #34495e;
         position: absolute;
         top: 60px;
@@ -232,7 +235,7 @@ body {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 40px;
+    gap: 100px;
     text-align: center;
     margin-top: 40px;
     margin-bottom:40px;
@@ -891,9 +894,14 @@ table td, table th {
       max-width: 220px;  /* force it to stay beside logo */
     }
   
-    .info-section h1 {
-      font-size: 12px;
-    }
+    /* .info-section h1 {
+      font-size: 35px;
+    } */
+     .namefont2 {
+  font-size: 50px;
+  font-family: "Lohit Marathi", "Mukta", "Noto Sans Devanagari", "Arial Unicode MS", sans-serif;
+}
+    
   
     .info-section h2 {
       font-size: 10px;
@@ -951,3 +959,159 @@ table td, table th {
 
 
 /* agri clg */
+.principal-container {
+      display: flex;
+      flex-wrap: wrap;
+      border: 1px solid #ccc;
+      padding: 20px;
+      border-radius: 8px;
+      max-width: 1000px;
+      margin: auto;
+      background-color: #f9f9f9;
+      margin-left: 20px;
+    }
+
+    .image-section {
+      flex: 1 1 40%;
+      padding: 10px;
+    }
+
+    .image-section img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+
+    .info-section {
+      flex: 1 1 60%;
+      padding: 10px;
+    }
+
+    .info-section h2 {
+      margin-top: 0;
+    }
+
+    .read-more-content {
+      display: none;
+      margin-top: 10px;
+      color: #333;
+    }
+
+    .read-more-btn {
+      margin-top: 15px;
+      padding: 10px 20px;
+      background-color: #007BFF;
+      border: none;
+      color: white;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+
+    .read-more-btn:hover {
+      background-color: #0056b3;
+    }
+
+    @media (max-width: 600px) {
+      .principal-container {
+        flex-direction: column;
+      }
+    }
+
+    /* Image Gallery Styles */
+    .image-gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 20px;
+      justify-items: center;
+    }
+
+    .gallery-image {
+      width: 100%;
+      height: auto;
+      cursor: pointer;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      transition: transform 0.3s ease;
+    }
+
+    .gallery-image:hover {
+      transform: scale(1.05);
+    }
+
+    /* Modal (Full-Screen Image) Styles */
+    .image-modal {
+      display: none;
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.8);
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+        
+    }
+    .hide-scrollbar {
+  overflow: hidden;
+}
+
+    .modal-content {
+      max-width: 90%;
+      max-height: 90%;
+      margin: auto;
+    }
+
+    .modal-image {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+
+    .close-button {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      color: white;
+      font-size: 35px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .close-button:hover {
+      color: #f44336;
+    }
+
+    /* Mobile Responsiveness */
+    @media (max-width: 768px) {
+      .image-gallery {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 15px;
+      }
+
+      .gallery-image {
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+        transition: transform 0.3s ease;
+      }
+
+      .close-button {
+        top: 10px;
+        right: 10px;
+        font-size: 30px;
+      }
+
+      /* Adjust modal image size for mobile */
+      .modal-content {
+        max-width: 100%;
+        max-height: 90%;
+      }
+    }
+
+    /* Small Devices (Mobile View) */
+    @media (max-width: 480px) {
+      .image-gallery {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+      }
+    }

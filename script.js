@@ -127,8 +127,10 @@ document.getElementById("contact-link").addEventListener("click", function (e) {
 
 // Function to scroll the gallery left or right
 
+// agri
 
-
-
+ function goToPrincipalPage() {
+    window.location.href = "principal.html";  // Redirect to principal.html
+  }
 
 

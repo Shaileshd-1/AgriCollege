@@ -37,7 +37,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    position: static;
+    position: sticky;
     top: 0;
     width: 100%;
     z-index: 1000;
@@ -206,30 +206,65 @@ body {
     }
 }
 /* About College */
-.about-college {
+/* .about-college {
     background: #f8f8f8;
     padding: 20px;
     margin: 20px auto;
     text-align: center;
     border-radius: 12px;
-    max-width: 800px;
+    max-width: 1000px;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
     margin-bottom: 40px;
 }
 
 .about-college h2 {
-    font-size: 24px;
-    color: #333;
+    font-size: 40px;
+    color: #4CAF50;
     margin-bottom: 10px;
 }
 
 .about-college p {
-    font-size: 16px;
+    font-size: 25px;
+    color: #666;
+    text-align: justify;
+    line-height: 1.6;
+} */
+/* About College */
+.about-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 20px;
+  gap: 20px;
+}
+
+.side-image {
+  width: 350px;
+  height: 600px;
+  margin-top: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,1,0.2);
+}
+
+.about-text {
+    
+  max-width: 1000px;
+  /* background: #f4f4f4; */
+  padding: 20px;
+  /* border-radius: 10px; */
+  /* box-shadow: 0 4px 8px rgba(0,0,0,0.1); */
+}
+.about-container p {
+    font-size: 25px;
     color: #666;
     text-align: justify;
     line-height: 1.6;
 }
-
+.about-container  h2 {
+    font-size: 40px;
+    color: #4CAF50;
+    margin-bottom: 10px;
+}
 /* Leadership Section */
 .leader-container {
     display: flex;
@@ -244,9 +279,9 @@ body {
 .leader {
     background: white;
     padding: 20px;
-    border: 2px solid #ddd;
-    border-radius: 12px;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    border: 2px solid #ddd; 
+    border-radius: 12px; 
+    /* box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1); */
     width: 400px;
     text-align: center;
 }
@@ -554,6 +589,8 @@ footer {
 #chai{
     font-size: 50px;
     color: coral;
+    margin-bottom: 20px;
+
 }
 #cimg{
     height:250px;
@@ -570,11 +607,15 @@ footer {
 #chairinformation{
     margin-left: 50px;
     margin-right: 50px;
-    text-align: center;
-    border: 2px solid #ddd;
-    border-radius: 12px;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
-    margin-bottom: 30%;
+    text-align: justify;
+    /* border: 2px solid #ddd; */
+    /* border-radius: 12px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1); */
+    margin-bottom: 20px;
+}
+#vchair{
+    text-align: left;
+    margin-left: 50px;
 }
 /* TeachingStaff */
 .teachingstaff{
@@ -860,6 +901,7 @@ table td, table th {
     object-fit: contain; /* Ensures proper scaling */
     max-width: 100%;
     display: block; /* Avoids inline whitespace issues */
+    
 }
 
 /* Responsive Design */
@@ -894,14 +936,7 @@ table td, table th {
       max-width: 220px;  /* force it to stay beside logo */
     }
   
-    /* .info-section h1 {
-      font-size: 35px;
-    } */
-     .namefont2 {
-  font-size: 50px;
-  font-family: "Lohit Marathi", "Mukta", "Noto Sans Devanagari", "Arial Unicode MS", sans-serif;
-}
-    
+  
   
     .info-section h2 {
       font-size: 10px;
@@ -1115,3 +1150,90 @@ table td, table th {
         grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
       }
     }
+    .name1{
+        font-size: xx-large;
+    }
+    .name2{
+        font-size: 55px;
+    }
+
+
+    /* Alumini */
+    body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f4f4f4;
+}
+
+.alumni-section {
+  padding: 40px 20px;
+  background: #fff;
+  text-align: center;
+}
+
+.alumni-section h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #2c3e50;
+}
+
+.alumni-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+  justify-content: center;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.alumni-card {
+  background: #ecf0f1;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.alumni-card:hover {
+  transform: translateY(-5px);
+}
+
+.alumni-photo {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.alumni-info {
+  padding: 10px;
+  background: #fff;
+  text-align: center;
+}
+
+.alumni-info h4 {
+  margin: 5px 0;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.alumni-info p {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* Chairman message */
+.chair p {
+    margin-top: 20px;
+    font-size: 25px;
+    /* color: #666; */
+    text-align: justify;
+    line-height: 1.6;
+    border-radius: 0%;
+}
+/* course */
+.course{
+    
+    margin-left: 20px;
+    text-align: left;
+}
